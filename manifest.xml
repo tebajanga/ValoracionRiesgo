@@ -83,7 +83,7 @@
 <helpinfo><![CDATA[]]></helpinfo>
 <masseditable>1</masseditable>
 <relatedmodules>
-<relatedmodule>FicheroFisicos</relatedmodule>
+<relatedmodule>FicherosFisicos</relatedmodule>
 </relatedmodules>
 </field>
 <field>
@@ -495,7 +495,7 @@
 </actions>
 <relatedlists>
 <relatedlist>
-<function>get_related_list</function>
+<function>get_dependents_list</function>
 <label>Mitigacion Riesgo</label>
 <sequence>0</sequence>
 <presence>0</presence>
