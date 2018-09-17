@@ -36,7 +36,7 @@
 <sql><![CDATA[CREATE TABLE `vtiger_valoracionriesgo` (
   `valoracionriesgoid` int(11) NOT NULL,
   `acttto` int(11) default NULL,
-  `catsg` int(11) default NULL,
+  `catrsg` int(11) default NULL,
   `probinherente` decimal(2,2) default NULL,
   `probresidual` decimal(2,2) default NULL,
   `impactoinherente` decimal(2,2) default NULL,
@@ -87,12 +87,12 @@
 </relatedmodules>
 </field>
 <field>
-<fieldname>catsg</fieldname>
+<fieldname>catrsg</fieldname>
 <uitype>10</uitype>
-<columnname>catsg</columnname>
+<columnname>catrsg</columnname>
 <tablename>vtiger_valoracionriesgo</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>catsg</fieldlabel>
+<fieldlabel>catrsg</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <selected>0</selected>
@@ -106,7 +106,7 @@
 <helpinfo><![CDATA[]]></helpinfo>
 <masseditable>1</masseditable>
 <relatedmodules>
-<relatedmodule>CatalogoSalvaGuarda</relatedmodule>
+<relatedmodule>CatalogoRiesgos</relatedmodule>
 </relatedmodules>
 </field>
 </fields>
@@ -466,12 +466,24 @@
 <columnindex>0</columnindex>
 </field>
 <field>
-<fieldname>referencia</fieldname>
+<fieldname>acttto</fieldname>
 <columnindex>1</columnindex>
 </field>
 <field>
-<fieldname>tiposalvaguarda</fieldname>
+<fieldname>catrsg</fieldname>
 <columnindex>2</columnindex>
+</field>
+<field>
+<fieldname>medidamitigante</fieldname>
+<columnindex>3</columnindex>
+</field>
+<field>
+<fieldname>valrsgstatus</fieldname>
+<columnindex>4</columnindex>
+</field>
+<field>
+<fieldname>responsable</fieldname>
+<columnindex>5</columnindex>
 </field>
 </fields>
 </customview>

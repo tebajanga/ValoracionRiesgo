@@ -53,14 +53,20 @@ class ValoracionRiesgo extends CRMEntity {
 		/* Format: Field Label => array(tablename => columnname) */
 		// tablename should not have prefix 'vtiger_'
 		'valoracionriesgo_no'=> array('valoracionriesgo' => 'valoracionriesgo_no'),
-		'refencia'=> array('catalogosalvaguarda' => 'referencia'),
-		'tiposalvaguarda'=> array('catalogosalvaguarda' => 'tiposalvaguarda')
+		'acttto'=> array('valoracionriesgo' => 'acttto'),
+		'catrsg'=> array('valoracionriesgo' => 'catrsg'),
+		'medidamitigante'=> array('valoracionriesgo' => 'medidamitigante'),
+		'valrsgstatus'=> array('valoracionriesgo' => 'valrsgstatus'),
+		'responsable'=> array('valoracionriesgo' => 'responsable')
 	);
 	public $list_fields_name = array(
 		/* Format: Field Label => fieldname */
 		'valoracionriesgo_no'=> 'valoracionriesgo_no',
-		'refencia'=> 'referencia',
-		'tiposalvaguarda'=> 'tiposalvaguarda'
+		'acttto'=> 'acttto',
+		'catrsg'=> 'catrsg',
+		'medidamitigante'=> 'medidamitigante',
+		'valrsgstatus'=> 'valrsgstatus',
+		'responsable'=> 'responsable'
 	);
 
 	// Make the field link to detail view from list view (Fieldname)
@@ -71,14 +77,20 @@ class ValoracionRiesgo extends CRMEntity {
 		/* Format: Field Label => array(tablename => columnname) */
 		// tablename should not have prefix 'vtiger_'
 		'valoracionriesgo_no'=> array('valoracionriesgo' => 'valoracionriesgo_no'),
-		'refencia'=> array('catalogosalvaguarda' => 'referencia'),
-		'tiposalvaguarda'=> array('catalogosalvaguarda' => 'tiposalvaguarda')
+		'acttto'=> array('valoracionriesgo' => 'acttto'),
+		'catrsg'=> array('valoracionriesgo' => 'catrsg'),
+		'medidamitigante'=> array('valoracionriesgo' => 'medidamitigante'),
+		'valrsgstatus'=> array('valoracionriesgo' => 'valrsgstatus'),
+		'responsable'=> array('valoracionriesgo' => 'responsable')
 	);
 	public $search_fields_name = array(
 		/* Format: Field Label => fieldname */
 		'valoracionriesgo_no'=> 'valoracionriesgo_no',
-		'refencia'=> 'referencia',
-		'tiposalvaguarda'=> 'tiposalvaguarda'
+		'acttto'=> 'acttto',
+		'catrsg'=> 'catrsg',
+		'medidamitigante'=> 'medidamitigante',
+		'valrsgstatus'=> 'valrsgstatus',
+		'responsable'=> 'responsable'
 	);
 
 	// For Popup window record selection

@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_valoracionriesgo</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_valoracionriesgo` (
+  `valoracionriesgoid` int(11) NOT NULL,
+  `acttto` int(11) default NULL,
+  `catrsg` int(11) default NULL,
+  `probinherente` decimal(2,2) default NULL,
+  `probresidual` decimal(2,2) default NULL,
+  `impactoinherente` decimal(2,2) default NULL,
+  `impactoresidual` decimal(2,2) default NULL,
+  `riesgoinherente` decimal(2,2) default NULL,
+  `riesgoresidual` decimal(2,2) default NULL,
+  `medidamitigante` text,
+  `valrsgstatus` varchar(200) DEFAULT NULL,
+  `responsable` varchar(200) DEFAULT NULL,
+  `cuando` date default NULL,
+  `valoracionriesgo_no` varchar(56) default NULL,
+  PRIMARY KEY (`valoracionriesgoid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_moduleclasscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_valoracionriesgocf` (
+  `valoracionriesgoid` int(11) NOT NULL,
+  PRIMARY KEY (`valoracionriesgoid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>
