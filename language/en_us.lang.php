@@ -9,14 +9,28 @@
  ************************************************************************************/
 
 $mod_strings = array(
-	'ModuleName' => 'Module Name',
-	'SINGLE_ModuleName' => 'Module Name',
-	'ModuleName ID' => 'Module Name ID',
+	'ValoracionRiesgo' => 'ValoracionRiesgo',
+	'SINGLE_ValoracionRiesgo' => 'ValoracionRiesgo',
+	'ValoracionRiesgo ID' => 'ValoracionRiesgo ID',
 
 	'LBL_CUSTOM_INFORMATION' => 'Custom Information',
-	'LBL_MODULEBLOCK_INFORMATION' => 'ModuleBlock Information',
+	'LBL_VALORACIONRIESGO_INFORMATION' => 'ModuleBlock Information',
 	'LBL_DESCRIPTION_INFORMATION' => 'Description',
 
-	'ModuleFieldLabel' => 'ModuleFieldLabel Text',
+	'LBL_RELATED_TO' => 'Related To',
+	'LBL_EVALUACION' => 'Evaluation',
+	'acttto' => 'Acttto',
+	'catrsg' => 'Catrsg',
+	'probinherente' => 'Probinherente',
+	'probresidual' => 'Probresidual',
+	'impactoinherente' => 'Impactoinherente',
+	'impactoresidual' => 'Impactoresidual',
+	'riesgoinherente' => 'Riesgoinherente',
+	'riesgoresidual' => 'Riesgoresidual',
+	'medidamitigante' => 'Medidamitigante',
+	'valrsgstatus' => 'Valrsgstatus',
+	'responsable' => 'Responsable',
+	'cuando' => 'Cuando',
+	'valoracionriesgo_no' => 'Valoracion Riesgo No'
 );
 ?>
