@@ -35,7 +35,7 @@ class ValoracionRiesgo extends CRMEntity {
 	/**
 	 * Mandatory for Saving, Include tables related to this module.
 	 */
-	public $tab_name = array('vtiger_crmentity', 'vtiger_valoracionriesgo', 'vtiger_valoracionriesgocf', 'vtiger_catalogosalvaguarda');
+	public $tab_name = array('vtiger_crmentity', 'vtiger_valoracionriesgo', 'vtiger_valoracionriesgocf');
 
 	/**
 	 * Mandatory for Saving, Include tablename and tablekey columnname here.
