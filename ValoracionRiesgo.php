@@ -130,8 +130,33 @@ class ValoracionRiesgo extends CRMEntity {
 	 */
 	public function vtlib_handler($modulename, $event_type) {
 		if ($event_type == 'module.postinstall') {
-			// TODO Handle post installation actions
+			// Handle post installation actions
+			require_once 'modules/com_vtiger_workflow/include.inc';
+			require_once 'modules/com_vtiger_workflow/tasks/VTEntityMethodTask.inc';
+			require_once 'modules/com_vtiger_workflow/VTEntityMethodManager.inc';
+			global $adb;
+
 			$this->setModuleSeqNumber('configure', $modulename, $modulename.'valrsg-', '0000001');
+
+			// Workflow
+			$wfrs = $adb->query("SELECT workflow_id FROM com_vtiger_workflows WHERE summary='ValoracionRiesgo Inherente and Residual Fields Calculator'");
+			if ($wfrs && $adb->num_rows($wfrs)==1) {
+				echo 'Workfolw already exists!';
+			} else {
+				$workflowManager = new VTWorkflowManager($adb);
+				$taskManager = new VTTaskManager($adb);
+				$ValoracionRiesgoWorkFlow = $workflowManager->newWorkFlow("ValoracionRiesgo");
+				$ValoracionRiesgoWorkFlow->test = '';
+				$ValoracionRiesgoWorkFlow->description = "ValoracionRiesgo Inherente and Residual Fields Calculator";
+				$ValoracionRiesgoWorkFlow->executionCondition = VTWorkflowManager::$ON_EVERY_SAVE;
+				$ValoracionRiesgoWorkFlow->defaultworkflow = 1;
+				$workflowManager->save($ValoracionRiesgoWorkFlow);
+				$task = $taskManager->createTask('VTUpdateFieldsTask', $ValoracionRiesgoWorkFlow->id);
+				$task->active = true;
+				$task->summary = 'ValoracionRiesgo Inherente and Residual Fields Calculator';
+				$task->field_value_mapping = '[{"fieldname":"riesgoinherente","valuetype":"expression","value":"probinherente * impactoinherente"}, {"fieldname":"riesgoresidual","valuetype":"expression","value":"probresidual * impactoresidual"}]';
+				$taskManager->saveTask($task);
+			}
 		} elseif ($event_type == 'module.disabled') {
 			// TODO Handle actions when this module is disabled.
 		} elseif ($event_type == 'module.enabled') {
